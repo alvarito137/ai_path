@@ -1,7 +1,15 @@
-import sys
-import platform
+def analyze_numbers(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return {
+        "total":total,
+        "avergae": average,
+        "max": max(numbers),
+        "min":min(numbers),
+}
 
-print("Python version:", sys.version)
-print("Platform:", platform.system())
-print("You are officially inside a professional environment.")
+data = [3,7,2,9,4]
+result = analyze_numbers(data)
+
+for key, value in result.items(): print(f"{key}:{value}")
 
